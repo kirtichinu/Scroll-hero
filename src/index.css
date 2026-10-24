@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #0a0a0e;
+  --color-accent: #ff5a1f;
+}
+
+html {
+  background: var(--color-ink);
+  color: #f4f4f5;
+  font-family: var(--font-display);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Hint to the browser which properties will animate, so it promotes layers early. */
+.will-transform {
+  will-change: transform;
+}
+
+/* Dashed centre line of the road. Wider than the viewport so it can slide horizontally. */
+.road-dashes {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.55) 0 56px,
+    transparent 56px 128px
+  );
+  background-size: 100% 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
